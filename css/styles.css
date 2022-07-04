@@ -1,9 +1,41 @@
 /* CUSTOM-PROPS */
 :root {
+  --green: rgba(48, 200, 143, 1);
+  --black: rgba(45, 49, 77, 1);
+  --gray: rgba(149, 151, 165, 1);
+
+  --green-linear: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
 
 }
 
 /* FONT-FACE  */
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Thin.woff2") format("woff2"),
+  url("../fonts/PublicSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Medium.woff2") format("woff2"),
+  url("../fonts/PublicSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
+  url("../fonts/PublicSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 /* GLOBAL-STYLES  */
@@ -23,13 +55,34 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+  color: var(--gray);
+  font-family: "Public Sans", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 26px;
+  letter-spacing: -0.25px;
   padding: 0;
   margin: 0;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }
 
 img {
@@ -45,10 +98,10 @@ img {
 
 /* CONTAINER  */
 .container {
-  max-width: 1200px;
+  max-width: 1150px;
   width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
